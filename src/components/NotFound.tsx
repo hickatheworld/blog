@@ -23,7 +23,7 @@ function NotFound() {
 			<div className='error-message'>Could not find {params['0']}.</div>
 			<Link to='/' className='to-home'>Get back to home.</Link>
 		</div>
-	)
+	);
 }
 
 export default NotFound;
