@@ -1,3 +1,5 @@
+import WarnProps from './WarnProps';
+
 /**
  * Props to pass to a HomeHeader component.
  */
@@ -12,7 +14,7 @@ interface HomeHeaderProps {
 	/** Any message to display below the descriptions. */
 	motd?: string;
 	/** Optional important message to display below the Header. */
-	warn?: string;
+	warn?: WarnProps;
 }
 
 export default HomeHeaderProps;

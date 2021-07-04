@@ -7,7 +7,11 @@ function Home() {
 		title: 'hickatheblog',
 		descs: ['Never finished projects expert'],
 		motd: 'Eggs are delicious in pasta',
-		warn: 'This website is indev haha.'
+		warn: {
+			title: 'Not ready yet',
+			message: 'This website is still under development hahaha',
+			persistent: true
+		}
 	}
 	return (
 		<div>

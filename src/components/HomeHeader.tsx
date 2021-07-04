@@ -1,9 +1,10 @@
 import '../styles/HomeHeader.sass';
 import HomeHeaderProps from '../types/HomeHeaderProps';
+import Warn from './Warn';
 
 function HomeHeader(props: HomeHeaderProps) {
 	const motd = () => props.motd ? <div className='home-header-motd'>{props.motd}</div> : null;
-	const warn = () => props.warn ? <div className='heading-warn'>{props.warn}</div> : null;
+	const warn = () => props.warn ? <Warn {...props.warn}/> : null;
 
 	return (
 		<div className='heading-container'>
