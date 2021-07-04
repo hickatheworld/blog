@@ -1,3 +1,4 @@
+import '../styles/HomeHeader.sass';
 import HomeHeaderProps from '../types/HomeHeaderProps';
 
 function HomeHeader(props: HomeHeaderProps) {
