@@ -17,11 +17,11 @@ function Home() {
 		<div>
 			<HomeHeader {...headerProps} />
 			<ArticleCard
-				title='Vive les tests unitaires'
-				description='En vrai je sais pas comment on fait ptdr'
-				id='vive-tests-unitaires'
+				title='Si la vie est un test'
+				description='Alors la mort est une réussite. Vraiment ? Nous verrons'
+				id='la-vie-est-un-test'
 				img='test.jpg'
-				date={new Date(1625324503728)}
+				date={new Date(1525324503728)}
 			/>
 		</div>
 	);
