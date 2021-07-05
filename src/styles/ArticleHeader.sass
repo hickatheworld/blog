@@ -1,0 +1,34 @@
+.article-header
+	position: relative
+	overflow: hidden
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	display: flex
+	height: 300px
+	border: 6px solid #ffffff
+	*
+		z-index: 1
+
+.article-header-background
+	z-index: 0
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: center center / cover
+	filter: blur(5px)
+	transform: scale(1.1)
+
+.article-header-title
+	padding: 10px 20px
+	border-radius: 2px
+	background: #ffffff
+	font: 35pt 'Josefin Sans'
+
+.article-header-date
+	margin: 15px 0
+	opacity: .3
+	font: 12pt 'Infer'
+	color: #ffffff
