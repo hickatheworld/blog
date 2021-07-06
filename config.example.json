@@ -1,0 +1,7 @@
+{
+	"INDEX_URL": "URL to a JSON file containing a BlogData object. In my use case it is a static file hosted on GitHub as I lack a server but a dynamically generated JSON object hosted on a REST API works perfectly as well.",
+	"TITLE": "The name of the blog",
+	"DESCS": [
+		"Some descriptions to give to yourself/your blog"
+	]
+}
