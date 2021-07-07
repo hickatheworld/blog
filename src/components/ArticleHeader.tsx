@@ -8,7 +8,7 @@ function ArticleHeader(props: ArticleHeaderProps) {
 		<div className='article-header'>
 			<div
 				className='article-header-background'
-				style={{backgroundImage: `url(/thumbnails/${props.banner})`}}
+				style={{backgroundImage: `url(/thumbnails/${props.thumbnail})`}}
 			>
 			</div>
 			<div className='article-header-title'>{props.title}</div>

@@ -10,7 +10,8 @@ interface WarnProps {
 	 * The message of the Warn. 
 	 */
 	message: string;
-	/** Whether to make the Warn closable by the user.
+	/** 
+	 * Whether to make the Warn closable by the user.
 	 * Making `persistent` true will not let the user close the Warn.
 	 * @default false
 	 */

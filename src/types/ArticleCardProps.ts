@@ -16,9 +16,9 @@ interface ArticleCardProps {
 	 */
 	id: string
 	/** 
-	 * Name of the article's image. 
+	 * The name of the article's thumbnail. Must include file extension. 
 	 */
-	img: string,
+	thumbnail: string,
 	/** 
 	 * Title of the article. 
 	 */
