@@ -14,7 +14,7 @@ function ArticleCard(props: ArticleCardProps) {
 		<Link className='article-card' to={`/a/${props.id}`}>
 			<img
 				className='article-card-thumbnail'
-				src={`/thumbnails/${props.img}`}
+				src={`/thumbnails/${props.thumbnail}`}
 				alt={props.title}
 			/>
 			<div className='article-card-texts'>

@@ -20,7 +20,7 @@ function Home() {
 				title='Si la vie est un test'
 				description='Alors la mort est une réussite. Vraiment ? Nous verrons'
 				id='la-vie-est-un-test'
-				img='test.jpg'
+				thumbnail='test.jpg'
 				date={new Date(1525324503728)}
 			/>
 		</div>
