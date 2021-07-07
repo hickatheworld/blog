@@ -3,6 +3,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../styles/ArticleCard.sass';
 import ArticleCardProps from '../types/ArticleCardProps';
+import { THUMBNAILS_URL } from '../config.json';
+
 
 /**
  * Card linking to an article of the blog on Home.
@@ -14,7 +16,7 @@ function ArticleCard(props: ArticleCardProps) {
 		<Link className='article-card' to={`/a/${props.id}`}>
 			<img
 				className='article-card-thumbnail'
-				src={`/thumbnails/${props.thumbnail}`}
+				src={`${THUMBNAILS_URL}${props.thumbnail}`}
 				alt={props.title}
 			/>
 			<div className='article-card-texts'>
