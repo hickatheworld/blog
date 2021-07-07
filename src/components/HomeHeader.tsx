@@ -4,7 +4,7 @@ import Warn from './Warn';
 
 function HomeHeader(props: HomeHeaderProps) {
 	const motd = () => props.motd ? <div className='home-header-motd'>{props.motd}</div> : null;
-	const warn = () => props.warn ? <Warn {...props.warn}/> : null;
+	const warn = () => props.warn ? <Warn {...props.warn} /> : null;
 
 	return (
 		<div className='heading-container'>

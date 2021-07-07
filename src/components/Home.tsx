@@ -1,7 +1,7 @@
 import HomeHeaderProps from '../types/HomeHeaderProps';
 import ArticleCard from './ArticleCard';
 import HomeHeader from './HomeHeader';
-import {TITLE as title, DESCS as descs} from '../config.json';
+import { TITLE as title, DESCS as descs } from '../config.json';
 function Home() {
 	const headerProps: HomeHeaderProps = {
 		title,

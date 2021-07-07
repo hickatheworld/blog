@@ -1,6 +1,5 @@
-import {useEffect} from 'react';
-import {useRef} from 'react';
-import {Link, useParams} from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import '../styles/NotFound.sass';
 
 function NotFound() {

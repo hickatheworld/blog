@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import { useRef } from 'react';
 import '../styles/Warn.sass';
 import WarnProps from '../types/WarnProps';
 /**

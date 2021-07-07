@@ -1,7 +1,7 @@
 import moment from 'moment';
+import { THUMBNAILS_URL } from '../config.json';
 import '../styles/ArticleHeader.sass';
 import ArticleHeaderProps from '../types/ArticleHeaderProps';
-import { THUMBNAILS_URL } from '../config.json';
 
 function ArticleHeader(props: ArticleHeaderProps) {
 	const date: string = moment(props.date).fromNow();

@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import './styles/App.sass';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
+import './styles/App.sass';
 
 function App() {
 	return (

@@ -1,9 +1,9 @@
 import moment from 'moment';
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { THUMBNAILS_URL } from '../config.json';
 import '../styles/ArticleCard.sass';
 import ArticleCardProps from '../types/ArticleCardProps';
-import { THUMBNAILS_URL } from '../config.json';
 
 
 /**
