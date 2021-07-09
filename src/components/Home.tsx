@@ -1,5 +1,4 @@
 import HomeHeaderProps from '../types/HomeHeaderProps';
-import ArticleCard from './ArticleCard';
 import HomeHeader from './HomeHeader';
 import { TITLE as title, DESCS as descs } from '../config.json';
 function Home() {
@@ -16,13 +15,6 @@ function Home() {
 	return (
 		<div>
 			<HomeHeader {...headerProps} />
-			<ArticleCard
-				title='Si la vie est un test'
-				description='Alors la mort est une réussite. Vraiment ? Nous verrons'
-				id='la-vie-est-un-test'
-				thumbnail='test.jpg'
-				date={new Date(1525324503728)}
-			/>
 		</div>
 	);
 }
