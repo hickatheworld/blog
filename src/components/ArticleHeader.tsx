@@ -3,6 +3,9 @@ import { THUMBNAILS_URL } from '../config.json';
 import '../styles/ArticleHeader.sass';
 import ArticleHeaderProps from '../types/ArticleHeaderProps';
 
+/**
+ * The header of a blog article.
+ */
 function ArticleHeader(props: ArticleHeaderProps) {
 	const date: string = moment(props.createdAt).fromNow();
 	return (

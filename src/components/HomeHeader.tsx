@@ -2,6 +2,9 @@ import '../styles/HomeHeader.sass';
 import HomeHeaderProps from '../types/HomeHeaderProps';
 import Warn from './Warn';
 
+/**
+ * The blog's home page header.
+ */
 function HomeHeader(props: HomeHeaderProps) {
 	const motd = () => props.motd ? <div className='home-header-motd'>{props.motd}</div> : null;
 	const warn = () => props.warn ? <Warn {...props.warn} /> : null;

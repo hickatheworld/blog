@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import '../styles/Warn.sass';
 import WarnProps from '../types/WarnProps';
+
 /**
  * Any warning to display on the website
  */

@@ -2,6 +2,9 @@ import ReactMarkdown from 'react-markdown';
 import ArticleData from '../types/ArticleData';
 import ArticleHeader from './ArticleHeader';
 
+/**
+ * A blog Article.
+ */
 function Article(props: ArticleData) {
 	return (
 		<div className='article'>

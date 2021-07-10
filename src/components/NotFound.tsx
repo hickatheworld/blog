@@ -2,6 +2,9 @@ import { useEffect, useRef } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import '../styles/NotFound.sass';
 
+/**
+ * Custom 404 page.
+ */
 function NotFound() {
 	const containerRef = useRef(null);
 	const params: Record<string, string> = useParams();
