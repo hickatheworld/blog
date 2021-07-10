@@ -4,9 +4,9 @@
  */
 interface ArticleCardProps {
 	/** 
-	 * Writing date of the article 
+	 * The time the Article was written at.
 	 */
-	date: Date;
+	createdAt: Date;
 	/** 
 	 * Short extract of the article. 
 	 */

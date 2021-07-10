@@ -10,8 +10,8 @@ import ArticleCardProps from '../types/ArticleCardProps';
  * Card linking to an article of the blog on Home.
  */
 function ArticleCard(props: ArticleCardProps) {
-	const fromNow: string = moment(props.date).fromNow();
-	const time: string = moment(props.date).format('YYYY/MM/DD [at] HH:mm');
+	const fromNow: string = moment(props.createdAt).fromNow();
+	const time: string = moment(props.createdAt).format('YYYY/MM/DD [at] HH:mm');
 	return (
 		<Link className='article-card' to={`/a/${props.id}`}>
 			<img

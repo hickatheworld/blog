@@ -3,9 +3,9 @@
  */
 interface ArticleHeaderProps {
 	/**
-	 * The date the article was published.
+	 * The time the Article was written at.
 	 */
-	date: Date;
+	createdAt: Date;
 	/**
 	 * The name of the article's thumbnail. Must include file extension.
 	 * In an `ArticleHeaderProps` context, it is the background of the component.

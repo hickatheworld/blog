@@ -4,7 +4,7 @@ import '../styles/ArticleHeader.sass';
 import ArticleHeaderProps from '../types/ArticleHeaderProps';
 
 function ArticleHeader(props: ArticleHeaderProps) {
-	const date: string = moment(props.date).fromNow();
+	const date: string = moment(props.createdAt).fromNow();
 	return (
 		<div className='article-header'>
 			<div
