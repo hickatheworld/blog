@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { THUMBNAILS_URL } from '../config.json';
+import { REPO } from '../config.json';
 import '../styles/ArticleCard.sass';
 import ArticleCardProps from '../types/ArticleCardProps';
 
@@ -12,11 +12,12 @@ import ArticleCardProps from '../types/ArticleCardProps';
 function ArticleCard(props: ArticleCardProps) {
 	const fromNow: string = moment(props.createdAt).fromNow();
 	const time: string = moment(props.createdAt).format('YYYY/MM/DD [at] HH:mm');
+	const thumbsBaseURL = `https://raw.githubusercontent.com/${REPO}/content/thumbnails/`;
 	return (
 		<Link className='article-card' to={`/a/${props.id}`}>
 			<img
 				className='article-card-thumbnail'
-				src={`${THUMBNAILS_URL}${props.thumbnail}`}
+				src={`${thumbsBaseURL}${props.thumbnail}`}
 				alt={props.title}
 			/>
 			<div className='article-card-texts'>
