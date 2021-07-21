@@ -1,6 +1,7 @@
 [_metadata_:title]:- "Test Article again"
 [_metadata_:date]:- "1626007428277"
 [_metadata_:thumbnail]:- "test2.jpg"
+[_metadata_:description]:- "This is another test article lol"
 
 # Test Article AGAIN HAHA
 
