@@ -53,7 +53,7 @@ export default async function fetchArticles(): Promise<ArticleData[]> {
 		const timestamp: string = /\[_metadata_:date\]:- "(.*)"/.exec(content)![1];
 		const thumbnail: string = /\[_metadata_:thumbnail\]:- "(.*)"/.exec(content)![1];
 		const description: string = /\[_metadata_:description\]:- "(.*)"/.exec(content)![1];
-		const createdAt = new Date(timestamp);
+		const createdAt = new Date(parseInt(timestamp));
 		// We can now remove those metadata lines from the content
 		// We don't use a split/slice/join method, it performs too poorly
 		// If we can at least optimize one part of this code lol
