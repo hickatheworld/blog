@@ -30,7 +30,7 @@ export default async function fetchArticles(): Promise<ArticleData[]> {
 	res = await get(`https://api.github.com/repos/${REPO}/branches/content`);
 	// We get the url of the content tree.
 	// This gives the base tree of the content branch
-	const contentLink = res.commit.tree.url;
+	const contentLink = res.commit.commit.tree.url;
 	// We need to get the link to the articles folder's tree
 	res = await get(contentLink);
 	const articlesLink = res.tree.find((f: any) => f.path === 'articles').url;
