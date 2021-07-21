@@ -1,11 +1,15 @@
+import { useEffect, useState } from 'react';
+import { DESCS as descs, TITLE as title } from '../config.json';
+import fetchArticles from '../fetch';
 import HomeHeaderProps from '../types/HomeHeaderProps';
+import ArticleCard from './ArticleCard';
 import HomeHeader from './HomeHeader';
-import { TITLE as title, DESCS as descs } from '../config.json';
+import Loader from './Loader';
 
 /**
  * The home page of the blog.
  */
-function Home() {
+function Home(props: any) {
 	const headerProps: HomeHeaderProps = {
 		title,
 		descs,
@@ -16,9 +20,25 @@ function Home() {
 			persistent: true
 		}
 	}
+	const [articlesLoading, setIsLoading] = useState(true);
+	const [articles, setArticles] = useState([]);
+	useEffect(() => {
+		const fetch = async () => {
+			const articles = await fetchArticles();
+			setArticles(articles as any);
+			setIsLoading(false);
+		}
+		fetch();
+	}, []);
 	return (
 		<div>
 			<HomeHeader {...headerProps} />
+			<div className='home-articles-list'>
+				{articlesLoading
+					? <Loader />
+					: articles.map(article => <ArticleCard {...article} />)
+				}
+			</div>
 		</div>
 	);
 }
