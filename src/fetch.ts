@@ -48,28 +48,37 @@ export default async function fetchArticles(): Promise<ArticleData[]> {
 		res = await get(article.url);
 		// The content return by GitHub is encoded in base64
 		let content = atob(res.content);
-		// First 4 lines of the article contain some metadata we'll parse.
-		const title: string = /\[_metadata_:title\]:- "(.*)"/.exec(content)![1];
-		const timestamp: string = /\[_metadata_:date\]:- "(.*)"/.exec(content)![1];
-		const thumbnail: string = /\[_metadata_:thumbnail\]:- "(.*)"/.exec(content)![1];
-		const description: string = /\[_metadata_:description\]:- "(.*)"/.exec(content)![1];
-		const createdAt = new Date(parseInt(timestamp));
-		// We can now remove those metadata lines from the content
-		// We don't use a split/slice/join method, it performs too poorly
-		// If we can at least optimize one part of this code lol
-		for (let i = 0; i < 4; i++) {
-			content = content.substring(content.indexOf('\n') + 1);
-		}
 		// The id of an article is just its file name without the extension.
 		const id: string = article.path.substring(0, article.path.indexOf('.'));
-		articles.push({
-			content,
-			createdAt,
-			description,
-			id,
-			title,
-			thumbnail
-		});
+		articles.push(parseMetadata(id, content));
 	}
 	return articles;
+}
+
+/**
+ * Creates an ArticleData object from an articles's content
+ * @param id The Id of the article
+ * @param content The Markdown content of the article
+ */
+export function parseMetadata(id: string, content: string): ArticleData {
+	// First 4 lines of the article contain some metadata we'll parse.
+	const title: string = /\[_metadata_:title\]:- "(.*)"/.exec(content)![1];
+	const timestamp: string = /\[_metadata_:date\]:- "(.*)"/.exec(content)![1];
+	const thumbnail: string = /\[_metadata_:thumbnail\]:- "(.*)"/.exec(content)![1];
+	const description: string = /\[_metadata_:description\]:- "(.*)"/.exec(content)![1];
+	const createdAt = new Date(parseInt(timestamp));
+	// We can now remove those metadata lines from the content
+	// We don't use a split/slice/join method, it performs too poorly
+	// If we can at least optimize one part of this code lol
+	for (let i = 0; i < 4; i++) {
+		content = content.substring(content.indexOf('\n') + 1);
+	}
+	return {
+		content,
+		createdAt,
+		description,
+		id,
+		title,
+		thumbnail
+	};
 }
