@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { DESCS as descs, TITLE as title } from '../config.json';
-import fetchArticles from '../fetch';
+import { fetchArticles } from '../fetch';
 import HomeHeaderProps from '../types/HomeHeaderProps';
 import ArticleCard from './ArticleCard';
 import HomeHeader from './HomeHeader';

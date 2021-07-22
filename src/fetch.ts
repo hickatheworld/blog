@@ -7,7 +7,7 @@ import ArticleData from './types/ArticleData';
  * @param url The URL to get
  * @returns The JSON data obtained. We can expect to only have JSON as this function will only be used to request the GitHub API.
  */
-async function get(url: string): Promise<Record<string, any>> {
+export async function get(url: string): Promise<Record<string, any>> {
 	return new Promise((resolve, reject) => {
 		_get(url, function(res) {
 			let data = '';
@@ -24,7 +24,7 @@ async function get(url: string): Promise<Record<string, any>> {
 /**
  * Fetches the blog articles from GitHub
  */
-export default async function fetchArticles(): Promise<ArticleData[]> {
+export async function fetchArticles(): Promise<ArticleData[]> {
 	// This will hold the response of each request we do.
 	let res: Record<string, any>;
 	res = await get(`https://api.github.com/repos/${REPO}/branches/content`);
