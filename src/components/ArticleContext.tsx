@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { REPO } from '../config.json';
 import { parseMetadata } from '../fetch';
+import '../styles/ArticleContext.sass';
 import ArticleData from '../types/ArticleData';
 import Article from './Article';
 import Loader from './Loader';
@@ -47,7 +48,7 @@ function ArticleContext() {
 						? <Article {...data} />
 						: <div className='article-not-found'>
 							<div className='article-not-found-title'>This article doesn't exist.</div>
-							<Link to='/'>Home</Link>
+							<Link to='/' className='article-not-found-link'>Home</Link>
 						</div>
 			}
 		</>
