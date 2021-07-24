@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import '../styles/Article.sass';
 import ArticleData from '../types/ArticleData';
 import ArticleHeader from './ArticleHeader';
 
